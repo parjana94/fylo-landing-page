@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+@import "config.scss";
+
+body {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  background-color: #f2f2f2;
+  button {
+    cursor: pointer;
+  }
+  img {
+    width: 100%;
+  }
+  .container {
+    width: 85%;
+    margin: 0 auto;
+    header {
+      padding-top: 10%;
+      @include flex(row);
+      img {
+        width: 100px;
+      }
+      menu {
+        @include flex(row);
+        ul {
+          &:first-child {
+            padding-right: 24px;
+          }
+          &:last-child {
+            padding-left: 24px;
+          }
+          li {
+            a {
+              font-size: 15px;
+              font-family: $rale;
+              text-transform: capitalize;
+              font-weight: 400;
+              text-decoration: none;
+              color: $primaryColor;
+            }
+          }
+        }
+      }
+    }
+    .top-sec {
+      padding-top: 100px;
+      img {
+        width: 100%;
+      }
+      .text-box {
+        padding-top: 40px;
+        padding-bottom: 32px;
+        h2 {
+          color: $primaryColor;
+          text-align: center;
+          line-height: 36px;
+          font-size: 1.5rem;
+          font-weight: 700;
+          padding-bottom: 24px;
+        }
+        p {
+          @include para(center, 21px, 14px);
+        }
+      }
+      .mail {
+        position: relative;
+        input {
+          @include input;
+        }
+        .validation {
+          @include validation;
+        }
+        button {
+          @include button;
+          transition: 0.5s;
+          &:hover {
+            background-color: hsla(221, 100%, 71%, 1);
+          }
+        }
+      }
+    }
+  }
+  .productive {
+    margin-top: 180px;
+    background-color: hsla(240, 75%, 98%, 1);
+    position: relative;
+    .bg {
+      position: absolute;
+      top: -8%;
+    }
+    .container {
+      .text-box {
+        padding-top: 90px;
+        h2 {
+          color: $primaryColor;
+          font-family: $rale;
+          font-weight: 700;
+          line-height: 24px;
+          text-align: center;
+          padding-bottom: 24px;
+        }
+        p {
+          @include para(center, 21px, 14px);
+          color: $paraColor;
+        }
+        .first {
+          padding-bottom: 14px;
+        }
+        .sec {
+          padding-bottom: 36px;
+        }
+        .fylo-work {
+          display: flex;
+          justify-content: center;
+          padding-bottom: 40px;
+          img {
+            width: auto;
+          }
+          .link {
+            display: flex;
+            align-items: center;
+            position: relative;
+            p {
+              color: hsla(170, 45%, 43%, 1);
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 16px;
+              padding-right: 8px;
+            }
+            &::after {
+              content: "";
+              height: 1px;
+              width: 100%;
+              background-color: hsla(170, 45%, 43%, 1);
+              position: absolute;
+              top: 22px;
+            }
+          }
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+      .profile {
+        background-color: white;
+        width: 280px;
+        margin: 0 auto;
+        box-shadow: 0px 0px 8px 4px rgba(56, 56, 56, 0.0458843);
+        border-radius: 3.93258px;
+        padding: 22px 13px 22px 26px;
+        img {
+          width: auto;
+        }
+        p {
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 18px;
+          letter-spacing: 0.384615px;
+          color: $primaryColor;
+        }
+        .prof-box {
+          display: flex;
+          align-items: center;
+          padding-top: 13px;
+          img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+          }
+          .prof-txt {
+            padding-left: 10px;
+            h2 {
+              color: $primaryColor;
+              text-transform: capitalize;
+              font-weight: 700;
+              font-size: 9px;
+              line-height: 12px;
+              letter-spacing: 0.45px;
+            }
+            h3 {
+              font-weight: 400;
+              font-size: 6px;
+              line-height: 12px;
+              letter-spacing: 0.3px;
+              color: $primaryColor;
+            }
+          }
+        }
+      }
+    }
+  }
+  .early-access {
+    background-color: hsla(238, 22%, 44%, 1);
+    margin-top: 82px;
+    padding-bottom: 70px;
+    .container {
+      .text-box {
+        padding-top: 54px;
+        text-align: center;
+        h2 {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 24px;
+          color: white;
+          font-family: $rale;
+          padding-bottom: 16px;
+        }
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 21px;
+          color: white;
+          padding-bottom: 24px;
+        }
+      }
+      .input-box {
+        input {
+          @include input;
+          border: none;
+        }
+        button {
+          @include button;
+          transition: 0.5s;
+          &:hover {
+            background-color: hsla(221, 100%, 71%, 1);
+          }
+        }
+      }
+    }
+  }
+  footer {
+    background-color: hsla(243, 87%, 12%, 1);
+    padding-top: 65px;
+    padding-bottom: 42px;
+    .container {
+      .footer-logo {
+        width: auto;
+        padding-bottom: 40px;
+      }
+      .contact {
+        display: flex;
+        align-items: center;
+        img {
+          width: auto;
+        }
+        a {
+          text-decoration: none;
+          color: white;
+          padding-left: 20px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+      .mail {
+        padding-top: 25px;
+        padding-bottom: 36px;
+      }
+    }
+    menu {
+      nav {
+        a {
+          color: white;
+          text-decoration: none;
+          text-transform: capitalize;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          transition: 0.5s;
+          &:hover {
+            color: hsla(221, 100%, 71%, 1);
+          }
+        }
+        li {
+          padding-bottom: 16px;
+        }
+      }
+      .first {
+        padding-bottom: 16px;
+      }
+    }
+    .soc {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      a {
+        text-decoration: none;
+        transition: 0.5s;
+      }
+      .fa-brands {
+        border: 1px solid white;
+        padding: 5px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 50%;
+        transition: 0.5s;
+        &:hover {
+          color: hsla(221, 100%, 71%, 1);
+          border-color: hsla(221, 100%, 71%, 1);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+$primaryColor: hsla(243, 87%, 12%, 1);
+$paraColor: hsla(243, 14%, 43%, 1);
+$rale: "Raleway", sans-serif;
+
+@mixin flex($direction) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: $direction;
+}
+@mixin para($align, $lineheight, $size) {
+  text-align: $align;
+  line-height: $lineheight;
+  font-size: $size;
+}
+@mixin button {
+  background-color: hsla(224, 93%, 58%, 1);
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100%;
+  background: #2f65f8;
+  box-shadow: 1px 1px 3px rgba(7, 4, 59, 0.157043);
+  border-radius: 3px;
+  border: none;
+  text-transform: capitalize;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $rale;
+}
+
+@mixin input {
+  width: 100%;
+  border: none;
+  border: 0.6px solid $primaryColor;
+  margin-bottom: 16px;
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15925);
+  border-radius: 3.125px;
+  padding: 14px 0 12px 0px;
+  &::placeholder {
+    color: hsla(0, 0%, 76%, 1);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.4px;
+    font-family: $rale;
+    padding-left: 24px;
+  }
+}
+
+@mixin validation {
+  color: hsla(343, 84%, 61%, 1);
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  position: absolute;
+  bottom: 40%;
+  display: none;
+}

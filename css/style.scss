@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
 @import "config.scss";
-
 body {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   background-color: #f2f2f2;
+  overflow-x: hidden;
   button {
     cursor: pointer;
   }
@@ -78,16 +78,23 @@ body {
             background-color: hsla(221, 100%, 71%, 1);
           }
         }
+        #email-field {
+          padding-left: 5%;
+        }
       }
     }
   }
   .productive {
     margin-top: 180px;
+    padding-bottom: 82px;
     background-color: hsla(240, 75%, 98%, 1);
     position: relative;
     .bg {
       position: absolute;
-      top: -8%;
+      top: -6%;
+    }
+    .bg-xl {
+      display: none;
     }
     .container {
       .text-box {
@@ -192,7 +199,6 @@ body {
   }
   .early-access {
     background-color: hsla(238, 22%, 44%, 1);
-    margin-top: 82px;
     padding-bottom: 70px;
     .container {
       .text-box {
@@ -215,9 +221,14 @@ body {
         }
       }
       .input-box {
+        position: relative;
         input {
           @include input;
           border: none;
+          padding-left: 5%;
+        }
+        #validation-sec {
+          @include validation;
         }
         button {
           @include button;
@@ -302,6 +313,183 @@ body {
         &:hover {
           color: hsla(221, 100%, 71%, 1);
           border-color: hsla(221, 100%, 71%, 1);
+        }
+      }
+    }
+  }
+}
+@include media-md {
+  .tablet-mail,
+  .input-box {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .footer-box {
+    @include flex(row);
+    align-items: flex-start;
+    menu {
+      display: flex;
+      gap: 50px;
+    }
+  }
+  .productive {
+    .container {
+      .productive-box {
+        .profile {
+          width: 330px;
+          p {
+            font-size: 12px;
+          }
+          .prof-box {
+            img {
+              width: 48px;
+              height: 48px;
+            }
+            .prof-txt {
+              h2 {
+                font-size: 12px;
+                padding-bottom: 10px;
+              }
+              h3 {
+                font-size: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-xl {
+  body {
+    img {
+      width: auto;
+    }
+    .container {
+      header {
+        padding-top: 5%;
+        img {
+          width: auto;
+        }
+        menu {
+          ul {
+            li {
+              a {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+      .top-sec {
+        display: flex;
+        flex-direction: row-reverse;
+        img {
+          width: 50%;
+        }
+        .text-box {
+          h2,
+          p {
+            text-align: left;
+          }
+        }
+        .tablet-mail {
+          display: flex;
+          width: 100%;
+          align-items: flex-start;
+          gap: 20px;
+          button {
+            width: 70%;
+            height: 45px;
+          }
+          .validation {
+            bottom: -6%;
+          }
+        }
+      }
+    }
+    .productive {
+      .bg {
+        display: none;
+      }
+      .bg-xl {
+        display: block;
+        position: absolute;
+        top: -15%;
+        width: 100vw;
+      }
+      .container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        .main-img {
+          width: 40%;
+          height: 410px;
+        }
+        .productive-box {
+          .text-box {
+            h2 {
+              text-align: left;
+              font-size: 35px;
+            }
+            p {
+              text-align: left;
+            }
+            .first,
+            .sec {
+              width: 400px;
+            }
+            .fylo-work {
+              justify-content: flex-start;
+            }
+          }
+          .profile {
+            margin: 0;
+          }
+        }
+      }
+    }
+    .early-access {
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 100px;
+      }
+      .text-box {
+        padding-top: 0;
+        h2 {
+          text-align: left;
+          font-size: 32px !important;
+          padding-bottom: 20px !important;
+        }
+        p {
+          text-align: left;
+          font-size: 14px !important;
+          width: 450px;
+          line-height: 24px !important;
+        }
+      }
+      .input-box {
+        width: 40%;
+        margin: 0;
+        position: relative;
+        .validation {
+          @include validation;
+        }
+        button {
+          width: 50% !important;
+        }
+      }
+    }
+    footer {
+      .container {
+        .footer-box {
+          menu {
+            gap: 140px;
+          }
         }
       }
     }

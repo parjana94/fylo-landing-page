@@ -19,10 +19,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script
-      src="https://kit.fontawesome.com/aef653fa80.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <div class="container">
@@ -42,60 +38,66 @@
       </header>
       <section class="top-sec">
         <img src="images/illustration-1.svg" alt="" />
-        <div class="text-box">
-          <h2>All your files in one secure location, accessible anywhere.</h2>
-          <p>
-            Fylo stores your most important files in one secure location. Access
-            them wherever you need, share and collaborate with friends, family,
-            and co-workers.
-          </p>
-        </div>
-        <div class="mail">
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email..."
-          />
-          <p class="validation">Please check your email</p>
-          <button>get started</button>
+        <div class="top-sec-box">
+          <div class="text-box">
+            <h2>All your files in one secure location, accessible anywhere.</h2>
+            <p>
+              Fylo stores your most important files in one secure location.
+              Access them wherever you need, share and collaborate with friends,
+              family, and co-workers.
+            </p>
+          </div>
+          <div class="mail tablet-mail">
+            <input
+              id="email-field"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email..."
+            />
+            <p class="validation">Please check your email</p>
+            <button onclick="validateEmail() ">get started</button>
+          </div>
         </div>
       </section>
     </div>
     <section class="productive">
       <img class="bg" src="images/bg-curve-mobile.svg" alt="" />
+      <img class="bg-xl" src="images/bg-curve-desktop.svg" alt="bg" />
       <div class="container">
-        <img src="images/illustration-2.svg" alt="" />
-        <div class="text-box">
-          <h2>Stay productive, wherever you are</h2>
-          <p class="first">
-            Never let location be an issue when accessing your files. Fylo has
-            you covered for all of your file storage needs.
-          </p>
-          <p class="sec">
-            Securely share files and folders with friends, family and colleagues
-            for live collaboration. No email attachments required!
-          </p>
-          <div class="fylo-work">
-            <a href="#"
-              ><div class="link">
-                <p>See how fylo works</p>
-                <img src="images/icon-arrow.svg" alt="" /></div
-            ></a>
+        <img class="main-img" src="images/illustration-2.svg" alt="" />
+        <div class="productive-box">
+          <div class="text-box">
+            <h2>Stay productive, wherever you are</h2>
+            <p class="first">
+              Never let location be an issue when accessing your files. Fylo has
+              you covered for all of your file storage needs.
+            </p>
+            <p class="sec">
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required!
+            </p>
+            <div class="fylo-work">
+              <a href="#"
+                ><div class="link">
+                  <p>See how fylo works</p>
+                  <img src="images/icon-arrow.svg" alt="" /></div
+              ></a>
+            </div>
           </div>
-        </div>
-        <div class="profile">
-          <img src="images/icon-quotes.svg" alt="quotes" />
-          <p>
-            Fylo has improved our team productivity by an order of magnitude.
-            Since making the switch our team has become a well-oiled
-            collaboration machine.
-          </p>
-          <div class="prof-box">
-            <img src="images/avatar-testimonial.jpg" alt="avatar" />
-            <div class="prof-txt">
-              <h2>kyle burton</h2>
-              <h3>Founder & CEO, Huddle</h3>
+          <div class="profile">
+            <img src="images/icon-quotes.svg" alt="quotes" />
+            <p>
+              Fylo has improved our team productivity by an order of magnitude.
+              Since making the switch our team has become a well-oiled
+              collaboration machine.
+            </p>
+            <div class="prof-box">
+              <img src="images/avatar-testimonial.jpg" alt="avatar" />
+              <div class="prof-txt">
+                <h2>kyle burton</h2>
+                <h3>Founder & CEO, Huddle</h3>
+              </div>
             </div>
           </div>
         </div>
@@ -113,49 +115,60 @@
         </div>
         <div class="input-box">
           <input
+            id="email-field-sec"
             type="email"
             id="email"
             name="email"
             placeholder="email@example.com"
           />
-          <button>get started for free</button>
+          <p id="validation-sec">Please check your email</p>
+          <button onclick="validateEmailSec()">get started for free</button>
         </div>
       </div>
     </section>
     <footer>
       <div class="container">
         <img class="footer-logo" src="images/logofooter.svg" alt="logo" />
-        <div class="contact">
-          <img src="images/icon-phone.svg" alt="phone" />
-          <a href="+1-543-123-4567">Phone: +1-543-123-4567</a>
-        </div>
-        <div class="contact mail">
-          <img src="images/icon-email.svg" alt="mail" />
-          <a href="mailto: example@fylo.com">example@fylo.com</a>
-        </div>
-        <menu>
-          <nav class="first">
-            <ul>
-              <li><a href="#">about us</a></li>
-              <li><a href="#">jobs</a></li>
-              <li><a href="#">press</a></li>
-              <li><a href="#">blog</a></li>
-            </ul>
-          </nav>
-          <nav class="sec">
-            <ul>
-              <li><a href="#">contact us</a></li>
-              <li><a href="#">terms</a></li>
-              <li><a href="#">privacy</a></li>
-            </ul>
-          </nav>
-        </menu>
-        <div class="soc">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <div class="footer-box">
+          <div class="contacts">
+            <div class="contact">
+              <img src="images/icon-phone.svg" alt="phone" />
+              <a href="+1-543-123-4567">Phone: +1-543-123-4567</a>
+            </div>
+            <div class="contact mail">
+              <img src="images/icon-email.svg" alt="mail" />
+              <a href="mailto: example@fylo.com">example@fylo.com</a>
+            </div>
+          </div>
+          <menu>
+            <nav class="first">
+              <ul>
+                <li><a href="#">about us</a></li>
+                <li><a href="#">jobs</a></li>
+                <li><a href="#">press</a></li>
+                <li><a href="#">blog</a></li>
+              </ul>
+            </nav>
+            <nav class="sec">
+              <ul>
+                <li><a href="#">contact us</a></li>
+                <li><a href="#">terms</a></li>
+                <li><a href="#">privacy</a></li>
+              </ul>
+            </nav>
+          </menu>
+          <div class="soc">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </div>
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
+    <script>
+      src = "https://kit.fontawesome.com/aef653fa80.js";
+      crossorigin = "anonymous";
+    </script>
   </body>
 </html>

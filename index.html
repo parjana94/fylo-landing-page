@@ -22,6 +22,17 @@
   </head>
   <body>
     <div class="container">
+      <div class="login">
+        <button id="close">X</button>
+        <form action="">
+          <h2>Enter your email and password</h2>
+          <input type="mail" name="" id="mail-input" />
+          <span id="mail-error"> Pls enter email</span>
+          <input type="password" class="pass" />
+          <span id="pass-error"> Pls enter password</span>
+          <button type="submit" id="btn">Submit</button>
+        </form>
+      </div>
       <header>
         <img src="images/logo.svg" alt="logo" />
         <menu>
@@ -32,7 +43,7 @@
             <li><a href="#">team</a></li>
           </ul>
           <ul>
-            <li><a href="#">sign in</a></li>
+            <li><a href="#" id="signin">sign in</a></li>
           </ul>
         </menu>
       </header>
